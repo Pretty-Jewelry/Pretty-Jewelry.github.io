@@ -11,7 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        plata: '#C0C0C0',
+                        plata: '#C4C4C4',
                         negro: '#000000',
                         dorado: '#D4AF37',
                     },
@@ -45,9 +45,9 @@
     <!-- Encabezado y Menú -->
     <header class="bg-white/70 backdrop-blur-md fixed w-full z-50 shadow-md">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-            <!-- TU LOGO Y SOLO "ASHLEY" -->
+            <!-- ✅ TU LOGO Y SOLO "ASHLEY" -->
             <div class="flex items-center gap-3">
-                <img src="https://i.imgur.com/9tG7y8L.png" alt="Ashley" class="h-14 w-14 object-contain">
+                <img src="https://i.imgur.com/mppz8aa.jpeg" alt="Ashley" class="h-14 w-14 object-contain">
                 <img src="https://i.imgur.com/v8Z7yQH.png" alt="Ashley" class="h-12 object-contain">
             </div>
 
@@ -60,7 +60,7 @@
                 <a href="#contacto" class="font-medium hover:text-dorado transition duration-300">Contacto</a>
             </nav>
 
-            <!-- TU NÚMERO -->
+            <!-- ✅ TU NÚMERO CORRECTO -->
             <a href="https://wa.me/593959590943" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700 transition shadow-lg">
                 <i class="fa fa-whatsapp text-lg"></i>
                 <span class="hidden sm:inline">Escríbenos</span>
@@ -68,111 +68,162 @@
         </div>
     </header>
 
-    <!-- SECCIÓN INICIO -->
+    <!-- ✅ SECCIÓN INICIO - DISEÑO DE PRINCIPIO -->
     <section id="inicio" class="pt-32 pb-24 bg-black/5">
         <div class="container mx-auto px-4 text-center">
-            <!-- LOGO GRANDE -->
+            <!-- ✅ TU LOGO GRANDE Y BONITO -->
             <div class="flex justify-center mb-8">
-                <img src="https://i.imgur.com/9tG7y8L.png" alt="Ashley" class="h-40 w-40 object-contain drop-shadow-2xl">
+                <img src="https://i.imgur.com/mppz8aa.jpeg" alt="Ashley" class="h-40 w-40 object-contain drop-shadow-2xl">
             </div>
-            <!-- FRASE GRANDE -->
-            <h1 class="font-elegante font-bold text-[clamp(2.8rem,6vw,4.5rem)] mb-4 text-shadow text-dorado">
+            <!-- ✅ TU FRASE GRANDE CON LA LETRA ELEGANTE -->
+            <h1 class="font-elegante font-bold text-[clamp(3rem,7vw,5rem)] mb-6 text-shadow text-dorado leading-tight">
                 Tu brillo es único, deja que tus accesorios lo acompañen
             </h1>
-            <!-- FRASE PEQUEÑA -->
-            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-700">
+            <!-- ✅ TU FRASE PEQUEÑA -->
+            <p class="text-lg md:text-xl font-semibold max-w-2xl mx-auto mb-10 text-gray-700">
                 Calidad y elegancia en cada pieza
             </p>
-            <a href="#catalogo" class="bg-negro text-white px-10 py-3 rounded-full text-lg font-semibold hover:bg-dorado transition-all duration-300 hover:scale-105">
+            <a href="#catalogo" class="bg-negro text-white px-10 py-3 rounded-full text-lg font-semibold hover:bg-dorado transition-all duration-300 hover:scale-105 borde-dorado">
                 Ver Catálogo
             </a>
         </div>
     </section>
 
-    <!-- CATÁLOGO - DISEÑO ORIGINAL -->
+    <!-- ✅ CATÁLOGO - DISEÑO ORIGINAL, TODO ACERO INOXIDABLE -->
     <section id="catalogo" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="font-elegante font-bold text-4xl text-center mb-16 text-dorado">Nuestras Joyas</h2>
+            <h2 class="font-elegante font-bold text-3xl md:text-4xl text-center mb-16 text-dorado">Nuestras Joyas</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 rounded-full bg-negro text-white hover:bg-dorado transition shadow-md">Todos</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Collares</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Anillos</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Aretes</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Pulseras</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 
                 <!-- Producto 1 -->
-                <div class="text-center bg-white rounded-lg p-6 sombra-joya hover:scale-105 transition">
-                    <img src="https://i.imgur.com/6xQe8sL.jpeg" alt="Collar de Acero Inoxidable" class="w-full h-64 object-contain mb-4">
-                    <h3 class="font-elegante font-bold text-2xl text-dorado mb-2">Collar Brillante</h3>
-                    <p class="text-gray-600 mb-3">Acero Inoxidable de alta calidad</p>
-                    <p class="text-xl font-bold text-dorado mb-4">$45.00 USD</p>
-                    <a href="https://wa.me/593959590943?text=Hola,%20me%20interesa%20el%20Collar%20Brillante" target="_blank" class="inline-block bg-negro text-white px-6 py-2 rounded-full hover:bg-dorado transition">
-                        Comprar por WhatsApp
-                    </a>
+                <div class="bg-white rounded-lg overflow-hidden sombra-joya hover:scale-105 transition-transform duration-300 borde-dorado">
+                    <div class="h-64 bg-gradient-to-br from-plata/10 to-white flex items-center justify-center overflow-hidden">
+                        <img src="https://i.imgur.com/6xQe8sL.jpeg" alt="Collar de Acero Inoxidable" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-elegante font-bold text-2xl text-dorado">Collar Brillante</h3>
+                        <p class="text-gray-700 text-sm mb-2">Acero Inoxidable de alta calidad</p>
+                        <p class="text-dorado font-semibold text-lg mt-1">$45.00 USD</p>
+                        <a href="https://wa.me/593959590943?text=Hola,%20me%20interesa%20el%20Collar%20Brillante" target="_blank" class="mt-4 w-full block text-center bg-negro text-white py-2 rounded hover:bg-dorado transition">
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Producto 2 -->
-                <div class="text-center bg-white rounded-lg p-6 sombra-joya hover:scale-105 transition">
-                    <img src="https://i.imgur.com/9aD7wQ2.jpeg" alt="Anillo de Acero Inoxidable" class="w-full h-64 object-contain mb-4">
-                    <h3 class="font-elegante font-bold text-2xl text-dorado mb-2">Anillo Clásico</h3>
-                    <p class="text-gray-600 mb-3">Acero Inoxidable de alta calidad</p>
-                    <p class="text-xl font-bold text-dorado mb-4">$32.00 USD</p>
-                    <a href="https://wa.me/593959590943?text=Hola,%20me%20interesa%20el%20Anillo%20Clásico" target="_blank" class="inline-block bg-negro text-white px-6 py-2 rounded-full hover:bg-dorado transition">
-                        Comprar por WhatsApp
-                    </a>
+                <div class="bg-white rounded-lg overflow-hidden sombra-joya hover:scale-105 transition-transform duration-300 borde-dorado">
+                    <div class="h-64 bg-gradient-to-br from-plata/10 to-white flex items-center justify-center overflow-hidden">
+                        <img src="https://i.imgur.com/9aD7wQ2.jpeg" alt="Anillo de Acero Inoxidable" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-elegante font-bold text-2xl text-dorado">Anillo Clásico</h3>
+                        <p class="text-gray-700 text-sm mb-2">Acero Inoxidable de alta calidad</p>
+                        <p class="text-dorado font-semibold text-lg mt-1">$32.00 USD</p>
+                        <a href="https://wa.me/593959590943?text=Hola,%20me%20interesa%20el%20Anillo%20Clásico" target="_blank" class="mt-4 w-full block text-center bg-negro text-white py-2 rounded hover:bg-dorado transition">
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Producto 3 -->
-                <div class="text-center bg-white rounded-lg p-6 sombra-joya hover:scale-105 transition">
-                    <img src="https://i.imgur.com/2kPmRbA.jpeg" alt="Aretes de Acero Inoxidable" class="w-full h-64 object-contain mb-4">
-                    <h3 class="font-elegante font-bold text-2xl text-dorado mb-2">Aretes Elegantes</h3>
-                    <p class="text-gray-600 mb-3">Acero Inoxidable de alta calidad</p>
-                    <p class="text-xl font-bold text-dorado mb-4">$32.00 USD</p>
-                    <a href="https://wa.me/593959590943?text=Hola,%20me%20interesan%20los%20Aretes%20Elegantes" target="_blank" class="inline-block bg-negro text-white px-6 py-2 rounded-full hover:bg-dorado transition">
-                        Comprar por WhatsApp
-                    </a>
+                <div class="bg-white rounded-lg overflow-hidden sombra-joya hover:scale-105 transition-transform duration-300 borde-dorado">
+                    <div class="h-64 bg-gradient-to-br from-plata/10 to-white flex items-center justify-center overflow-hidden">
+                        <img src="https://i.imgur.com/2kPmRbA.jpeg" alt="Aretes de Acero Inoxidable" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-elegante font-bold text-2xl text-dorado">Aretes Elegantes</h3>
+                        <p class="text-gray-700 text-sm mb-2">Acero Inoxidable de alta calidad</p>
+                        <p class="text-dorado font-semibold text-lg mt-1">$28.00 USD</p>
+                        <a href="https://wa.me/593959590943?text=Hola,%20me%20interesan%20los%20Aretes%20Elegantes" target="_blank" class="mt-4 w-full block text-center bg-negro text-white py-2 rounded hover:bg-dorado transition">
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN NOSOTROS -->
+    <!-- ✅ SECCIÓN NOSOTROS -->
     <section id="nosotros" class="py-20 bg-gradient-to-b from-plata/10 to-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="font-elegante font-bold text-4xl mb-10 text-dorado">Sobre Nosotros</h2>
-            <p class="max-w-2xl mx-auto text-lg">
-                En <strong class="text-dorado">Ashley</strong> diseñamos piezas únicas de <strong>Acero Inoxidable</strong>, pensadas para resaltar tu belleza y acompañarte en cada momento especial. Calidad, elegancia y durabilidad en cada detalle.
-            </p>
-        </div>
-    </section>
-
-    <!-- CÓMO COMPRAR - TU FRASE PUESTA -->
-    <section id="como-comprar" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="font-elegante font-bold text-4xl mb-12 text-dorado">Cómo Comprar</h2>
-            <div class="max-w-xl mx-auto space-y-6 text-lg">
-                <p>1. Elige la joya que más te guste de acero inoxidable</p>
-                <p>2. Dale clic al botón <strong>"Comprar por WhatsApp"</strong></p>
-                <p>3. <strong>Por WhatsApp acordamos la entrega del producto</strong> donde mejor te quede</p>
+        <div class="container mx-auto px-4">
+            <h2 class="font-elegante font-bold text-4xl text-center mb-12 text-dorado">Sobre Nosotros</h2>
+            <div class="max-w-3xl mx-auto text-center bg-white/50 p-8 rounded-xl sombra-joya">
+                <p class="text-lg mb-4">
+                    En <strong class="text-dorado font-elegante text-2xl">Ashley</strong>, creemos que una joya es más que un accesorio: es un recuerdo, una emoción, una historia.
+                </p>
+                <p class="text-lg">
+                    Trabajamos con <strong>Acero inoxidable</strong> de la más alta calidad, diseñando piezas únicas para resaltar tu belleza y acompañarte en cada momento especial. Elegancia, durabilidad y exclusividad es lo que te ofrecemos.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="py-20 bg-gradient-to-b from-plata/10 to-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="font-elegante font-bold text-4xl mb-8 text-dorado">Contáctanos</h2>
-            <p class="mb-6 text-lg">¿Tienes alguna duda o quieres un diseño especial? Escríbenos:</p>
-            <p class="text-xl font-semibold mb-4"><i class="fa fa-whatsapp text-dorado mr-2"></i> +593 959 590 943</p>
-            <a href="https://wa.me/593959590943" target="_blank" class="inline-block bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition shadow-lg">
-                <i class="fa fa-whatsapp mr-2"></i> Enviar Mensaje Ahora
-            </a>
+    <!-- ✅ CÓMO COMPRAR - TU FRASE EXACTA -->
+    <section id="como-comprar" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-elegante font-bold text-4xl text-center mb-16 text-dorado">Cómo Comprar</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                
+                <div class="text-center p-6 border border-dorado/20 rounded-xl sombra-joya bg-gradient-to-b from-plata/5 to-white">
+                    <div class="w-16 h-16 bg-dorado/20 text-dorado rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-inner">1</div>
+                    <h3 class="font-bold text-xl mb-2">Elige tu joya</h3>
+                    <p>Selecciona tu accesorio favorito de acero inoxidable.</p>
+                </div>
+
+                <div class="text-center p-6 border border-dorado/20 rounded-xl sombra-joya bg-gradient-to-b from-plata/5 to-white">
+                    <div class="w-16 h-16 bg-dorado/20 text-dorado rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-inner">2</div>
+                    <h3 class="font-bold text-xl mb-2">Escribe por WhatsApp</h3>
+                    <p>Dale clic al botón de compra y te responderemos al instante.</p>
+                </div>
+
+                <div class="text-center p-6 border border-dorado/20 rounded-xl sombra-joya bg-gradient-to-b from-plata/5 to-white">
+                    <div class="w-16 h-16 bg-dorado/20 text-dorado rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-inner">3</div>
+                    <h3 class="font-bold text-xl mb-2">Acordamos la entrega</h3>
+                    <p><strong>Por WhatsApp acordamos la entrega del producto</strong> de la forma que te quede mejor.</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="bg-negro text-white py-6 text-center">
+    <!-- ✅ CONTACTO -->
+    <section id="contacto" class="py-20 bg-gradient-to-b from-plata/10 to-white">
         <div class="container mx-auto px-4">
-            <img src="https://i.imgur.com/9tG7y8L.png" alt="Ashley" class="h-10 w-10 mx-auto mb-2 opacity-70">
-            <p class="font-elegante text-xl text-dorado">Ashley</p>
-            <p class="text-sm text-plata/60">Elegancia y calidad en acero inoxidable</p>
+            <h2 class="font-elegante font-bold text-4xl text-center mb-12 text-dorado">Contáctanos</h2>
+            <div class="max-w-lg mx-auto text-center bg-white/60 p-8 rounded-xl sombra-joya">
+                <p class="text-lg mb-6">¿Tienes alguna duda o buscas un diseño especial? Escríbenos, con gusto te atenderemos.</p>
+                
+                <div class="space-y-4 mb-8">
+                    <p class="flex items-center justify-center gap-3 text-lg"><i class="fa fa-whatsapp text-dorado text-2xl"></i> +593 959 590 943</p>
+                    <p class="flex items-center justify-center gap-3 text-lg"><i class="fa fa-instagram text-dorado text-2xl"></i> @ashleyjoyerias</p>
+                </div>
+
+                <a href="https://wa.me/593959590943" target="_blank" class="inline-block bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition shadow-lg">
+                    <i class="fa fa-whatsapp mr-2"></i> Enviar Mensaje Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ PIE DE PÁGINA -->
+    <footer class="bg-negro text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center mb-3">
+                <img src="https://i.imgur.com/9tG7y8L.png" alt="Ashley" class="h-12 w-12 object-contain opacity-80">
+            </div>
+            <p class="font-elegante text-2xl text-dorado">Ashley</p>
+            <p class="text-plata/70 text-sm mt-2">Elegancia y calidad en acero inoxidable ✨</p>
+            <p class="text-xs mt-2">&copy; 2026 - Todos los derechos reservados</p>
         </div>
     </footer>
 
