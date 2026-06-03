@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Joyerías</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        plata: '#C0C0C0',
+                        negro: '#000000',
+                        dorado: '#D4AF37',
+                    },
+                    fontFamily: {
+                        elegante: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+            }
+            .sombra-joya {
+                box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            }
+            .borde-dorado {
+                border: 2px solid;
+                border-image: linear-gradient(45deg, #D4AF37, #FFDF80, #D4AF37) 1;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-plata/10 to-white text-negro font-sans">
+
+    <!-- Encabezado y Menú -->
+    <header class="bg-white/70 backdrop-blur-md fixed w-full z-50 shadow-md">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <!-- Logo YA PUESTO -->
+            <div class="flex items-center gap-3">
+                <img src="https://i.imgur.com/Z5bQ7xQ.png" alt="Ashley Joyerías" class="h-16 w-16 object-contain">
+                <span class="font-elegante font-bold text-xl md:text-2xl text-dorado">Ashley Joyerías</span>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="hidden md:flex gap-8">
+                <a href="#inicio" class="font-medium hover:text-dorado transition duration-300">Inicio</a>
+                <a href="#catalogo" class="font-medium hover:text-dorado transition duration-300">Catálogo</a>
+                <a href="#nosotros" class="font-medium hover:text-dorado transition duration-300">Nosotros</a>
+                <a href="#como-comprar" class="font-medium hover:text-dorado transition duration-300">Cómo Comprar</a>
+                <a href="#contacto" class="font-medium hover:text-dorado transition duration-300">Contacto</a>
+            </nav>
+
+            <!-- Botón WhatsApp - CAMBIA EL NUMERO AQUI -->
+            <a href="https://wa.me/593959590943" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700 transition shadow-lg">
+                <i class="fa fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Escríbenos</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="pt-32 pb-24 bg-black/5">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Logo GRANDE YA PUESTO -->
+            <div class="flex justify-center mb-8">
+                <img src="https://i.imgur.com/Z5bQ7xQ.png" alt="Ashley Joyerías" class="h-40 w-40 object-contain drop-shadow-2xl">
+            </div>
+            <h1 class="font-elegante font-bold text-[clamp(2.8rem,6vw,4.5rem)] mb-4 text-shadow text-dorado">
+                Elegancia en cada detalle
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-700">
+                Joyas únicas diseñadas para brillar en tus momentos especiales. Calidad, estilo y exclusividad en cada pieza.
+            </p>
+            <a href="#catalogo" class="bg-negro text-white px-10 py-3 rounded-full text-lg font-semibold hover:bg-dorado transition-all duration-300 hover:scale-105 borde-dorado">
+                Ver Catálogo
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Catálogo -->
+    <section id="catalogo" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-elegante font-bold text-3xl md:text-4xl text-center mb-16 text-dorado">Nuestras Joyas</h2>
+
+            <!-- Categorías -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 rounded-full bg-negro text-white hover:bg-dorado transition shadow-md">Todos</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Collares</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Anillos</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Aretes</button>
+                <button class="px-6 py-2 rounded-full bg-plata/20 hover:bg-plata/40 transition">Pulseras</button>
+            </div>
+
+            <!-- Productos CON FOTOS DE EJEMPLO YA PUESTAS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- Producto 1 -->
+                <div class="bg-white rounded-lg overflow-hidden sombra-joya hover:scale-105 transition-transform duration-300 borde-dorado">
+                    <div class="h-64 bg-gradient-to-br from-plata/10 to-white flex items-center justify-center overflow-hidden">
+                        <!-- Foto de Collar EJEMPLO -->
+                        <img src="https://i.imgur.com/6xQe8sL.jpg" alt="Collar Brillante" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-elegante font-bold text-xl">Collar Brillante</h3>
+                        <p class="text-dorado font-semibold text-lg mt-1">$45.00 USD</p>
+                        <a href="https://wa.me/593959590943?text=Hola,%20me%20interesa%20el%20Collar%20Brillante" target="_blank" class="mt-4 w-full block text-center bg-negro text-white py-2 rounded hover:bg-dorado transition">
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="bg-white rounded-lg overflow-hidden sombra-joya hover:scale-105 transition-transform duration-300 borde-dorado">
+                    <div class="h-64 bg-gradient-to-br from-plata/10 to-white flex items-center justify-center overflow-hidden">
+                        <!-- Foto de Anillo EJEMPLO -->
+                        <img src="https://i.imgur.com/9aD7wQ2.jpg" alt="Anillo Clásico" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-elegante font-bold text-xl">Anillo Clásico</h3>
+                        <p class="text-dorado font-semibold text-lg mt-1">$32.00 USD</p>
+                        <a href="https://wa.me/593959590943?text=Hola,%20me%20interesa%20el%20Anillo%20Clásico" target="_blank" class="mt-4 w-full block text-center bg-negro text-white py-2 rounded hover:bg-dorado transition">
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="bg-white rounded-lg overflow-hidden sombra-joya hover:scale-105 transition-transform duration-300 borde-dorado">
+                    <div class="h-64 bg-gradient-to-br from-plata/10 to-white flex items-center justify-center overflow-hidden">
+                        <!-- Foto de Aretes EJEMPLO -->
+                        <img src="https://i.imgur.com/2kPmRbA.jpg" alt="Aretes de Plata" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-elegante font-bold text-xl">Aretes de Plata</h3>
+                        <p class="text-dorado font-semibold text-lg mt-1">$28.00 USD</p>
+                        <a href="https://wa.me/593959590943?text=Hola,%20me%20interesan%20los%20Aretes%20de%20Plata" target="_blank" class="mt-4 w-full block text-center bg-negro text-white py-2 rounded hover:bg-dorado transition">
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-20 bg-gradient-to-b from-plata/10 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-elegante font-bold text-3xl md:text-4xl text-center mb-12 text-dorado">Sobre Nosotros</h2>
+            <div class="max-w-3xl mx-auto text-center bg-white/50 p-8 rounded-xl sombra-joya">
+                <p class="text-lg mb-4">
+                    En <strong class="text-dorado">Ashley Joyerías</strong>, creemos que una joya es más que un accesorio: es un recuerdo, una emoción, una historia. Nacimos con la ilusión de crear piezas únicas, diseñadas con amor y fabricadas con materiales de la más alta calidad.
+                </p>
+                <p class="text-lg">
+                    Cada diseño es pensado para resaltar tu belleza y acompañarte en los momentos más importantes de tu vida. Elegancia, exclusividad y confianza: eso es lo que te ofrecemos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cómo Comprar -->
+    <section id="como-comprar" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-elegante font-bold text-3xl md:text-4xl text-center mb-16 text-dorado">Cómo Comprar</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                
+                <div class="text-center p-6 border border-dorado/20 rounded-xl sombra-joya bg-gradient-to-b from-plata/5 to-white">
+                    <div class="w-16 h-16 bg-dorado/20 text-dorado rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-inner">1</div>
+                    <h3 class="font-bold text-xl mb-2">Elige tu joya</h3>
+                    <p>Selecciona la pieza que más te guste de nuestro catálogo.</p>
+                </div>
+
+                <div class="text-center p-6 border border-dorado/20 rounded-xl sombra-joya bg-gradient-to-b from-plata/5 to-white">
+                    <div class="w-16 h-16 bg-dorado/20 text-dorado rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-inner">2</div>
+                    <h3 class="font-bold text-xl mb-2">Escribe por WhatsApp</h3>
+                    <p>Dale clic al botón de compra y envíanos tu mensaje, te responderemos al instante.</p>
+                </div>
+
+                <div class="text-center p-6 border border-dorado/20 rounded-xl sombra-joya bg-gradient-to-b from-plata/5 to-white">
+                    <div class="w-16 h-16 bg-dorado/20 text-dorado rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-inner">3</div>
+                    <h3 class="font-bold text-xl mb-2">Recibe tu pedido</h3>
+                    <p>Acordamos el pago y la entrega. Enviamos a todo Guayaquil y Ecuador.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-20 bg-gradient-to-b from-plata/10 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-elegante font-bold text-3xl md:text-4xl text-center mb-12 text-dorado">Contáctanos</h2>
+            <div class="max-w-lg mx-auto text-center bg-white/60 p-8 rounded-xl sombra-joya">
+                <p class="text-lg mb-6">¿Tienes alguna duda o buscas un diseño especial? Escríbenos, con gusto te atenderemos.</p>
+                
+                <div class="space-y-4 mb-8">
+                    <p class="flex items-center justify-center gap-3 text-lg"><i class="fa fa-whatsapp text-dorado text-2xl"></i> +593959590943</p>
+                    <p class="flex items-center justify-center gap-3 text-lg"><i class="fa fa-instagram text-dorado text-2xl"></i> @ashleyjoyerias</p>
+                </div>
+
+                <a href="https://wa.me/593959590953" target="_blank" class="inline-block bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition shadow-lg">
+                    <i class="fa fa-whatsapp mr-2"></i> Enviar Mensaje Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página Logo YA PUESTO -->
+    <footer class="bg-negro text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center mb-3">
+                <img src="https://i.imgur.com/Z5bQ7xQ.png" alt="Ashley Joyerías" class="h-12 w-12 object-contain opacity-80">
+            </div>
+            <p class="font-elegante text-lg">&copy; 2026 Ashley Joyerías - Todos los derechos reservados</p>
+            <p class="text-plata/70 text-sm mt-2">Elegancia y calidad en cada detalle</p>
+        </div>
+    </footer>
+
+</body>
+</html>
