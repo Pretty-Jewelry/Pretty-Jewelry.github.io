@@ -46,13 +46,10 @@
     <!-- Encabezado y Menú -->
     <header class="bg-white/70 backdrop-blur-md fixed w-full z-50 shadow-md">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-            <!-- Logo YA PUESTO -->
             <div class="flex items-center gap-3">
                 <img src="https://i.imgur.com/bkTtesg.png" alt="Ashley" class="h-16 w-16 object-contain">
                 <span class="font-elegante font-bold text-xl md:text-2xl text-dorado">Ashley</span>
             </div>
-
-            <!-- Navegación -->
             <nav class="hidden md:flex gap-8">
                 <a href="#inicio" class="font-medium hover:text-dorado transition duration-300">Inicio</a>
                 <a href="#catalogo" class="font-medium hover:text-dorado transition duration-300">Catálogo</a>
@@ -60,8 +57,6 @@
                 <a href="#como-comprar" class="font-medium hover:text-dorado transition duration-300">Cómo Comprar</a>
                 <a href="#contacto" class="font-medium hover:text-dorado transition duration-300">Contacto</a>
             </nav>
-
-            <!-- Botón WhatsApp -->
             <a href="https://wa.me/593959590943" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-green-700 transition shadow-lg">
                 <i class="fa fa-whatsapp text-lg"></i>
                 <span class="hidden sm:inline">Escríbenos</span>
@@ -87,139 +82,151 @@
         </div>
     </section>
 
-    <!-- Sección Catálogo - Modificada con pestañas y botones -->
+    <!-- Sección Catálogo - CORREGIDA CON FILTROS -->
     <section id="catalogo" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="font-elegante font-bold text-3xl md:text-4xl text-center mb-6 text-dorado">Nuestras Joyas</h2>
             <p class="text-center text-gray-600 mb-10">Selecciona la categoría que buscas</p>
 
-            <!-- Pestañas de categorías -->
+            <!-- Botones de Categorías -->
             <div class="flex flex-wrap justify-center gap-3 mb-12 border-b border-gray-200 pb-4">
-                <button class="tab-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-negro text-white" data-tab="todos">Todos</button>
-                <button class="tab-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white" data-tab="collares">Cadenas</button>
-                <button class="tab-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white" data-tab="anillos">Anillos</button>
-                <button class="tab-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white" data-tab="aretes">Aretes</button>
-                <button class="tab-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white" data-tab="pulseras">Pulseras</button>
+                <button onclick="mostrarCategoria('todos')" id="btn-todos" class="categoria-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-negro text-white">Todos</button>
+                <button onclick="mostrarCategoria('cadenas')" id="btn-cadenas" class="categoria-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white">Cadenas</button>
+                <button onclick="mostrarCategoria('anillos')" id="btn-anillos" class="categoria-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white">Anillos</button>
+                <button onclick="mostrarCategoria('aretes')" id="btn-aretes" class="categoria-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white">Aretes</button>
+                <button onclick="mostrarCategoria('pulseras')" id="btn-pulseras" class="categoria-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-plata/20 text-gray-800 hover:bg-dorado hover:text-white">Pulseras</button>
             </div>
 
-            <!-- Contenido por categorías -->
-            <div class="tab-content">
+            <!-- Contenedor de Productos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-                <!-- Todos los productos -->
-                <div id="todos" class="tab-pane block">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        
-                        <!-- Cadenas -->
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/UHWANGY.png" alt="Balloon initial" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Balloon initial</h4>
-                                <p class="text-gray-600 mb-4">$6.99 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Balloon%20initial*%0APrecio:%20$6.99%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Balloon%20initial*%0APrecio:%20$6.99%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <!-- ====================== CADENAS ====================== -->
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/UHWANGY.png" alt="Balloon initial" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Balloon initial</h4>
+                            <p class="text-gray-600 mb-4">$6.99 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Balloon%20initial*%0APrecio:%20$6.99%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Balloon%20initial*%0APrecio:%20$6.99%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/qQJ7xi9.png" alt="Inicial en nácar" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Inicial en nácar</h4>
-                                <p class="text-gray-600 mb-4">$5.99 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Inicial%20en%20nácar*%0APrecio:%20$5.99%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Inicial%20en%20nácar*%0APrecio:%20$5.99%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/qQJ7xi9.png" alt="Inicial en nácar" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Inicial en nácar</h4>
+                            <p class="text-gray-600 mb-4">$5.99 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Inicial%20en%20nácar*%0APrecio:%20$5.99%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Inicial%20en%20nácar*%0APrecio:%20$5.99%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/LVM3EX7.png" alt="Silueta de corazón" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Silueta de corazón</h4>
-                                <p class="text-gray-600 mb-4">$6.50 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Silueta%20de%20corazón*%0APrecio:%20$6.50%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Silueta%20de%20corazón*%0APrecio:%20$6.50%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/LVM3EX7.png" alt="Silueta de corazón" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Silueta de corazón</h4>
+                            <p class="text-gray-600 mb-4">$6.50 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Silueta%20de%20corazón*%0APrecio:%20$6.50%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Silueta%20de%20corazón*%0APrecio:%20$6.50%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/ciY8tz7.jpeg" alt="Tú y yo" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Tú y yo</h4>
-                                <p class="text-gray-600 mb-4">$5.99 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Tú%20y%20yo*%0APrecio:%20$5.99%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Tú%20y%20yo*%0APrecio:%20$5.99%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/ciY8tz7.jpeg" alt="Tú y yo" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Tú y yo</h4>
+                            <p class="text-gray-600 mb-4">$5.99 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Tú%20y%20yo*%0APrecio:%20$5.99%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Tú%20y%20yo*%0APrecio:%20$5.99%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/5HMmLMm.jpeg" alt="Juego concha de nácar" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Juego concha de nácar</h4>
-                                <p class="text-gray-600 mb-4">$7.50 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Juego%20concha%20de%20nácar*%0APrecio:%20$7.50%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Juego%20concha%20de%20nácar*%0APrecio:%20$7.50%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/5HMmLMm.jpeg" alt="Juego concha de nácar" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Juego concha de nácar</h4>
+                            <p class="text-gray-600 mb-4">$7.50 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Juego%20concha%20de%20nácar*%0APrecio:%20$7.50%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Juego%20concha%20de%20nácar*%0APrecio:%20$7.50%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/bqKn7IZ.jpeg" alt="Collar Minimalista" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Collar Minimalista</h4>
-                                <p class="text-gray-600 mb-4">$6.50 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Collar%20Minimalista*%0APrecio:%20$6.50%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Collar%20Minimalista*%0APrecio:%20$6.50%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/bqKn7IZ.jpeg" alt="Collar Minimalista" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Collar Minimalista</h4>
+                            <p class="text-gray-600 mb-4">$6.50 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Collar%20Minimalista*%0APrecio:%20$6.50%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Collar%20Minimalista*%0APrecio:%20$6.50%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/EKh8zzf.jpeg" alt="Collar sutil y elegante" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Sutil y elegante</h4>
-                                <p class="text-gray-600 mb-4">$15.00 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Sutil%20y%20elegante*%0APrecio:%20$15.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Sutil%20y%20elegante*%0APrecio:%20$15.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/EKh8zzf.jpeg" alt="Sutil y elegante" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Sutil y elegante</h4>
+                            <p class="text-gray-600 mb-4">$15.00 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Sutil%20y%20elegante*%0APrecio:%20$15.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Sutil%20y%20elegante*%0APrecio:%20$15.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/SDX7I7K.jpeg" alt="Flor de lirio de la valle" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Flor de lirio de la valle</h4>
-                                <p class="text-gray-600 mb-4">$7.00 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Flor%20de%20lirio%20de%20la%20valle*%0APrecio:%20$7.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Flor%20de%20lirio%20de%20la%20valle*%0APrecio:%20$7.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/SDX7I7K.jpeg" alt="Flor de lirio de la valle" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Flor de lirio de la valle</h4>
+                            <p class="text-gray-600 mb-4">$7.00 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Flor%20de%20lirio%20de%20la%20valle*%0APrecio:%20$7.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Flor%20de%20lirio%20de%20la%20valle*%0APrecio:%20$7.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/wuoaZy2.jpeg" alt="Cadena dorada con centro blanco" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Cadena dorada con centro blanco</h4>
-                                <p class="text-gray-600 mb-4">$7.00 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Cadena%20dorada%20con%20centro%20blanco*%0APrecio:%20$7.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Cadena%20dorada%20con%20centro%20blanco*%0APrecio:%20$7.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/wuoaZy2.jpeg" alt="Cadena dorada con centro blanco" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Cadena dorada con centro blanco</h4>
+                            <p class="text-gray-600 mb-4">$7.00 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Cadena%20dorada%20con%20centro%20blanco*%0APrecio:%20$7.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Cadena%20dorada%20con%20centro%20blanco*%0APrecio:%20$7.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/657Jcp0.jpeg" alt="Collar doble con perla" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Collar doble con perla</h4>
-                                <p class="text-gray-600 mb-4">$7.00 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Collar%20doble%20con%20perla*%0APrecio:%20$7.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Collar%20doble%20con%20perla*%0APrecio:%20$7.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
+                <div class="producto categoria-cadenas">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/657Jcp0.jpeg" alt="Collar doble con perla" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Collar doble con perla</h4>
+                            <p class="text-gray-600 mb-4">$7.00 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Collar%20doble%20con%20perla*%0APrecio:%20$7.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Collar%20doble%20con%20perla*%0APrecio:%20$7.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Anillos -->
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <img src="https://i.imgur.com/EmOmvN0.jpeg" alt="Anillo unión eterna" class="w-full h-72 object-cover">
-                            <div class="p-5">
-                                <h4 class="font-semibold text-lg mb-1">Anillo unión eterna</h4>
-                                <p class="text-gray-600 mb-4">$6.00 USD</p>
-                                <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Anillo%20unión%20eterna*%0APrecio:%20$6.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
-                                <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Anillo%20unión%20eterna*%0APrecio:%20$6.00%20USD%0A%0AQuiero%20comprarlo,%20¿cómo%20procedemos?" target="_blank" class="w-full block text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">💳 Comprar ahora</a>
-                            </div>
-                        </div>
-
-                        <!-- Aretes -->
-                        <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <!-- ====================== ANILLOS ====================== -->
+                <div class="producto categoria-anillos">
+                    <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://i.imgur.com/EmOmvN0.jpeg" alt="Anillo unión eterna" class="w-full h-72 object-cover">
+                        <div class="p-5">
+                            <h4 class="font-semibold text-lg mb-1">Anillo unión eterna</h4>
+                            <p class="text-gray-600 mb-4">$6.00 USD</p>
+                            <a href="https://wa.me/593959590943?text=🛒%20Agregar%20al%20carrito:%0A%0A*Anillo%20unión%20eterna*%0APrecio:%20$6.00%20USD%0A%0A¿Está%20disponible?" target="_blank" class="w-full block text-center border border-dorado text-dorado py-2 rounded-lg font-medium mb-2 hover:bg-dorado/10 transition-colors">🛒 Agregar al carrito</a>
+                            <a href="https://wa.me/593959590943?text=💳%20Comprar%20ahora:%0A%0A*Anillo%20unión%20eterna*%0APrecio:%20$6.00%
